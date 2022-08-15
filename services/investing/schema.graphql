@@ -1,0 +1,8 @@
+type InvestingAccount {
+  id: ID!
+  investing: Boolean
+}
+
+type Query {
+  investingAccount(id: ID!): InvestingAccount
+}

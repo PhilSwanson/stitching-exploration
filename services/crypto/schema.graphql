@@ -1,0 +1,8 @@
+type CryptoAccount {
+  id: ID!
+  crypto: Boolean
+}
+
+type Query {
+  cryptoAccount(id: ID!): CryptoAccount
+}

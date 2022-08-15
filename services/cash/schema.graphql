@@ -1,0 +1,8 @@
+type CashAccount {
+  id: ID!
+  cash: Boolean
+}
+
+type Query {
+  cashAccount(id: ID!): CashAccount
+}

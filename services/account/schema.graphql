@@ -1,0 +1,24 @@
+interface Account {
+  id: ID!
+  createdAt: String
+}
+
+type CryptoAccount implements Account {
+  id: ID!
+  createdAt: String
+}
+
+type CashAccount implements Account {
+  id: ID!
+  createdAt: String
+}
+
+type InvestingAccount implements Account {
+  id: ID!
+  createdAt: String
+}
+
+type Query {
+  account(id: ID!): Account
+  accounts(ids: [ID!]!): [Account]!
+}

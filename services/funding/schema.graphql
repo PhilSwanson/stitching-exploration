@@ -1,0 +1,22 @@
+interface Account {
+  id: ID!
+}
+
+type AccountFunding {
+  accountId: String!
+  pendingFundsTransfers: [String]!
+}
+
+type CashAccount implements Account {
+  id: ID!
+  funding: AccountFunding
+}
+
+type InvestingAccount implements Account {
+  id: ID!
+  funding: AccountFunding
+}
+
+type Query {
+  account(id: ID!): Account
+}
